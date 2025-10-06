@@ -1,0 +1,5 @@
+aiogram
+openai
+aiosqlite
+apscheduler
+python-dotenv
