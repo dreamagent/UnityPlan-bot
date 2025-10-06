@@ -10,10 +10,10 @@ import aiosqlite
 from openai import OpenAI
 
 logging.basicConfig(level=logging.INFO)
-load_dotenv()
+import os
 
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 
 assert BOT_TOKEN, "❌ BOT_TOKEN не знайдено в .env"
 assert OPENAI_API_KEY, "❌ OPENAI_API_KEY не знайдено в .env"
